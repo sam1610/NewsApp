@@ -4,6 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card *ngFor="let article of News.articles">
+    <ion-img [src]="article.urlToImage"></ion-img>
 
+    <ion-card-content>
+      <ion-card-title> {{article.title }}</ion-card-title>
+      <p> {{article.description }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
