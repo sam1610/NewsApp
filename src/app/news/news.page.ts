@@ -11,7 +11,8 @@ export class NewsPage implements OnInit {
   constructor(private newsService:NewsService) { }
 
   ngOnInit() {
-    this.newsService.getData('everything?q=bitcoin&from=2018-10-22&sortBy=publishedAt')
+    this.newsService
+    .getData('everything?q=bitcoin&from=2018-10-22&sortBy=publishedAt')
     .subscribe(
       data => console.log(data)
     )
