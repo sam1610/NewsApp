@@ -1,3 +1,4 @@
+import { NewsPage } from './../news/news.page';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -17,9 +18,9 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
+        path: 'news',
+        outlet: 'news',
+        component: NewsPage
       },
       {
         path: 'about',
@@ -35,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(news:news)',
     pathMatch: 'full'
   }
 ];
